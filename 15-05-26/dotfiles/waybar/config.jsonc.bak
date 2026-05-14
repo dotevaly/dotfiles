@@ -1,0 +1,111 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 4,
+
+    "modules-left": [
+        "clock",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "group/stats", // This is the new collapsed pill
+        "battery",
+        "tray",
+        "custom/power"
+    ],
+    // Group Definition
+    "group/stats": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-memory",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/stat-icon", // The "anchor" icon
+            "cpu",
+            "memory",
+            "temperature"
+        ]
+    },
+    "custom/stat-icon": {
+        "format": "󰍛",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "format": " {usage}%", // Added text so it's worth expanding
+        "tooltip": true
+    },
+
+    "memory": {
+        "format": " {}%",
+        "tooltip": true
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "",
+            "default": "",
+            "urgent": ""
+        },
+        "persistent-workspaces": {
+            "*": 5 // Keeps 5 dots visible at all times
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 30,
+        "separate-outputs": true
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%A, %B %d, %Y (%R)}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon}",
+        "format-charging": "",
+        "format-plugged": "",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "{capacity}% - {timeTo}"
+    },
+
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "⚠",
+        "tooltip-format": "{essid} ({signalStrength}%)"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "",
+        "format-icons": { "default": ["", "", ""] },
+        "on-click": "pavucontrol",
+        "tooltip-format": "Volume: {volume}%"
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout" // Or your preferred logout script
+    }
+}

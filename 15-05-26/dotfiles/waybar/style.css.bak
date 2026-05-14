@@ -1,0 +1,101 @@
+/* Import Pywal colors */
+@import url("../../.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "JetBrainsMono Nerd Font", Roboto, Arial, sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    /* Use the background color from pywal with some transparency */
+    background-color: rgba(0, 0, 0, 0.8); 
+    /* Bottom border using pywal accent */
+    border-bottom: 2px solid @color1;
+    color: @foreground;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+/* Individual Module Styling */
+#workspaces,
+#clock,
+#battery,
+#network,
+#pulseaudio,
+#tray {
+    padding: 0 12px;
+    margin: 4px 3px;
+    /* This creates the "pill" shape */
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: @foreground;
+}
+
+/* Styling for the expanded elements inside the pill */
+#cpu, #memory, #temperature {
+    padding: 0 5px;
+}
+
+/* Anchor icon for the stats group */
+#custom-stat-icon {
+    color: @color1;
+    padding-right: 5px;
+}
+
+/* Workspace Specifics */
+#workspaces button {
+    padding: 0 5px;
+    color: @foreground;
+    background-color: transparent;
+}
+
+#workspaces button.active {
+    color: @color1;
+    border-bottom: 2px solid @color1;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+    color: white;
+}
+
+/* Specific Accent Colors from Pywal */
+#clock {
+    color: @color2;
+    font-weight: bold;
+}
+
+#pulseaudio {
+    color: @color3;
+}
+
+#network {
+    color: @color4;
+}
+
+#battery.charging {
+    color: @color5;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: white;
+        color: black;
+    }
+}
+
+#tray {
+    background-color: transparent;
+}

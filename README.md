@@ -10,11 +10,30 @@ Hyprland-based dotfiles with Nextcloud sync for backup/restore workflow.
 | [waybar](https://github.com/Alexays/Waybar) | Status bar |
 | [rofi](https://github.com/davatorium/rofi) | Application launcher |
 | [kitty](https://sw.kovidgoyal.net/kitty/) | Terminal emulator |
+| [dolphin](https://apps.kde.org/dolphin/) | File manager |
 | [mako](https://github.com/emersion/mako) | Notification daemon |
 | [pywal](https://github.com/dylanaraps/pywal) | Dynamic color theming |
 | [hyprlock](https://github.com/hyprwm/hyprlock) | Screen locker |
+| [hyprpaper](https://github.com/hyprwm/hyprpaper) | Wallpaper daemon |
+| [hyprshot](https://github.com/Gustash/hyprshot) | Screenshots |
 | [cliphist](https://github.com/semanticart/cliphist) | Clipboard manager |
+| [wl-clipboard](https://github.com/bugaevc/wl-clipboard) | Clipboard CLI (`wl-paste`, `wl-copy`) |
+| [nm-applet](https://wiki.gnome.org/Projects/NetworkManager) | NetworkManager tray icon |
+| [networkmanager_dmenu](https://github.com/firecat53/networkmanager-dmenu) | Network menu via rofi |
+| [rofi-bluetooth](https://github.com/nickclyde/rofi-bluetooth) | Bluetooth menu via rofi |
+| [hyprpolkitagent](https://github.com/hyprwm/hyprpolkitagent) | PolKit authentication agent |
+| [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland) | Desktop portal (file pickers, screen capture) |
+| [nextcloud](https://nextcloud.com/) | Nextcloud sync client |
+| [bitwarden-desktop](https://bitwarden.com/) | Password manager |
+| [go-hass-agent](https://github.com/home-assistant/go-hass-agent) | Home Assistant integration |
+| [wireplumber](https://github.com/PipeWire/wireplumber) | Audio management (`wpctl`) |
+| [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/) | PulseAudio GUI (waybar on-click) |
+| [brightnessctl](https://github.com/Hummer12007/brightnessctl) | Backlight control |
+| [playerctl](https://github.com/altdesktop/playerctl) | Media player controls |
 | [zenity](https://help.gnome.org/users/zenity/) | GUI dialogs |
+| [dbus-update-activation-environment](https://github.com/flatpak/xdg-dbus-proxy) | DBus environment setup |
+| jetbrains-mono-nerd-font | Monospace font (mako, rofi) |
+| oranchelo-icon-theme | Icon theme (rofi) |
 
 ## Installation
 
@@ -56,9 +75,21 @@ mkdir -p ~/Nextcloud/Wallpapers
 
 | Binding | Action |
 |---------|--------|
+| `SUPER + Q` | Open terminal (kitty) |
+| `SUPER + C` | Close window |
+| `SUPER + E` | File manager (dolphin) |
+| `SUPER + R` | App launcher (rofi) |
+| `SUPER + V` | Toggle floating |
+| `SUPER + F` | Fullscreen |
+| `SUPER + L` | Lock screen |
+| `SUPER + S` | Screenshot region |
+| `SUPER + SHIFT + S` | Screenshot window |
+| `SUPER + SHIFT + P` | Screenshot monitor |
+| `SUPER + B` | NetworkManager menu (rofi) |
+| `SUPER + SHIFT + B` | Bluetooth menu (rofi) |
+| `SUPER + SHIFT + V` | Clipboard history (cliphist + rofi) |
 | `SUPER + W` | Cycle wallpaper forward |
 | `SUPER + SHIFT + W` | Cycle wallpaper backward |
-| `SUPER + L` | Lock screen |
 | `SUPER + ALT + B` | Backup configs to Nextcloud |
 | `SUPER + ALT + SHIFT + B` | Restore configs from Nextcloud |
 

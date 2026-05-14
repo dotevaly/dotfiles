@@ -1,0 +1,111 @@
+configuration {
+    modi: "run,drun,window";
+    icon-theme: "Oranchelo";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "APPS";
+    display-run: "RUN";
+    display-window: "WINDOW";
+    sidebar-mode: true;
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    spacing: 0;
+    /* Reduced global font size */
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+window {
+    width: 800px;
+    height: 600px;
+    border: 2px;
+    border-color: @selected-normal-background;
+    background-color: @background;
+    padding: 0px;
+}
+
+mainbox {
+    background-color: @background;
+    padding: 0px;
+    margin: 0px;
+    children: [ inputbar, listview, mode-switcher ];
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @background;
+    padding: 0px;
+}
+
+prompt {
+    background-color: @selected-normal-background;
+    /* Keeping bold for the label, but slightly smaller */
+    font: "JetBrainsMono Nerd Font Bold 9";
+    padding: 10px 15px;
+    text-color: @background;
+}
+
+entry {
+    padding: 10px;
+    text-color: @foreground;
+    background-color: @background;
+}
+
+listview {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    columns: 1;
+    spacing: 0px;
+    background-color: @background;
+}
+
+element {
+    /* Reduced vertical padding from 12px to 6px */
+    padding: 6px 15px;
+    background-color: transparent;
+    text-color: @foreground;
+    spacing: 8px;
+}
+
+element-icon {
+    /* Smaller icons to match smaller text */
+    size: 16px;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+}
+
+element selected {
+    background-color: @selected-normal-background;
+    text-color: @background;
+}
+
+element-text selected {
+    text-color: @background;
+}
+
+mode-switcher {
+    padding: 0px;
+}
+
+button {
+    padding: 10px;
+    background-color: @background;
+    text-color: @foreground;
+    border: 2px 0px 0px 0px;
+    border-color: @selected-normal-background;
+}
+
+button selected {
+    background-color: @selected-normal-background;
+    text-color: @background;
+}
