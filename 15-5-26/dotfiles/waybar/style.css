@@ -1,0 +1,103 @@
+/* Import Pywal colors */
+@import url("../../.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "JetBrainsMono Nerd Font", Roboto, Arial, sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), @background;
+    color: @foreground;
+}
+
+/* Group Pill Containers */
+#group-sysutils, 
+#group-hardware, 
+#group-tray-drawer, 
+#group-power {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 4px 6px;
+    padding: 0 12px;
+}
+
+/* Icon specific colors and padding */
+#custom-sysicon, #custom-hwicon, #custom-trayicon, #custom-power {
+    padding-right: 8px;
+}
+
+#custom-sysicon { color: @color4; }
+#custom-hwicon { color: @color5; }
+#custom-trayicon { color: @color6; }
+
+/* Drawer child spacing */
+.sysutils-child, .hw-child, .tray-child, .not-power {
+    margin-left: 12px;
+}
+
+/* Shared styling for modules */
+#workspaces,
+#backlight,
+#network,
+#pulseaudio,
+#cpu,
+#memory,
+#custom-gpu,
+#tray,
+#window,
+#clock {
+    background-color: transparent;
+    padding: 0 8px;
+    margin: 0;
+}
+
+#workspaces { padding: 0px 0px; }
+#window { font-weight: bold; }
+
+#clock {
+    padding-right: 15px;
+    color: @foreground;
+    font-weight: bold;
+}
+
+/* Power Menu Group specific styling */
+#custom-power, #custom-poweroff, #custom-quit, #custom-lock, #custom-reboot {
+    background-color: transparent;
+    padding: 0 12px;
+}
+
+#custom-power { color: @color1; }
+#custom-poweroff { color: @color1; }
+#custom-quit { color: @color2; }
+#custom-lock { color: @color3; }
+#custom-reboot { color: @color4; }
+
+/* Workspace Specifics */
+#workspaces button {
+    padding: 0 12px;
+    color: @foreground;
+    background-color: transparent;
+}
+
+#workspaces button.active {
+    color: @color1;
+    border-bottom: 3px solid @color1;
+}
+
+#workspaces button.urgent {
+    background-color: @color1;
+    color: @background;
+}
+
+/* Color Accents */
+#pulseaudio { color: @color3; }
+#network { color: @color4; }
+#backlight { color: @color5; }
+#cpu { color: @color2; }
+#memory { color: @color3; }
+#custom-gpu { color: @color6; }
+
+#tray { padding-right: 10px; }
