@@ -161,4 +161,4 @@ Pywal generates color schemes from wallpapers:
 ## Screenshots
 <img width="2560" height="1440" alt="pasted file" src="https://github.com/user-attachments/assets/b0f43c0e-2703-4b61-950e-99ce47491834" />
 <img width="2560" height="1440" alt="2" src="https://github.com/user-attachments/assets/f0eb31a3-ff10-484c-89ae-645c32f072f3" />
-
+<img width="2560" height="1440" alt="rofi and notifs" src="https://github.com/user-attachments/assets/f4385f76-a2e7-41ee-a036-d7d022b3bcf4" />
